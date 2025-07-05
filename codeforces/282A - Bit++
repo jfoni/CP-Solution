@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n;
+    cin >> n;
+    int S=0;
+ 
+    while(n--)
+    {
+        string str;
+        cin >> str;
+        if(str== "X++" || str=="++X")
+ 
+            S++;
+ 
+        else if(str=="X--" || str=="--X")
+ 
+            S--;
+ 
+    }
+    cout<< S <<endl;
+}
