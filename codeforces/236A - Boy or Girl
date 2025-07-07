@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    string str;
+    cin >> str;
+
+    set<char>s;
+    for(int i=0;i<str.size();i++){
+        s.insert(str[i]);
+    }
+
+    int num=s.size();
+
+    if(num%2==0)
+        cout << "CHAT WITH HER!" <<endl;
+    else
+        cout << "IGNORE HIM!" <<endl;
+}
