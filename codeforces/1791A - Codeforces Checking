@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    int t;
+    cin >> t;
+
+    string target = "codeforces";
+
+    while(t--)
+    {
+        char c;
+        cin >> c;
+
+        bool found = false;
+
+        for(int i=0; i<target.size(); i++)
+        {
+            if(target[i]==c)
+            {
+                found = true;
+                break;
+            }
+        }
+
+        if(found)
+            cout << "YES" <<endl;
+
+        else
+            cout << "NO" <<endl;
+    }
+
+}
