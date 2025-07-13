@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    int k,n,w;
+    cin >> k >> n >> w;
+
+    int sum=(w*(w+1))/2;
+    int TCOST=k*sum;
+
+    int borrow=max(0,TCOST-n);
+
+    cout << borrow <<endl;
+}
