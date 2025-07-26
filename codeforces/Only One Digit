@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    int t;
+    cin >> t;
+
+    while(t--)
+    {
+
+        int x;
+        cin >> x;
+
+        vector<int>v;
+
+        int temp=x;
+                 while(temp>0)
+        {
+            int d=temp%10;
+            v.push_back(d);
+            temp/=10;
+        }
+
+        cout << *min_element(v.begin(),v.end()) <<endl;
+
+    }
+}
+
