@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+ 
+const int N = 2e5 + 5;
+int temp[N], preCnt[N];
+ 
+int main()
+{
+    int n, k, q;
+    cin >> n >> k >> q;
+    for(int i = 1; i <= n; i++)
+    {
+        int l, r;
+        cin >> l >> r;
+        temp[l]++;
+        temp[r + 1]--;
+    }
+    for(int i = 1; i <= N; i++)
+    {
+        temp[i] += temp[i - 1];
+    }
+     for(int i = 0; i <= N; i++){
+        preCnt[i] = (temp[i] >= k);
+     }
+      for(int i = 1; i <= N; i++){
+        preCnt[i] += preCnt[i - 1];
+      }
+      while(q--){
+        int l, r;
+        cin >> l >> r;
+        int ans = preCnt[r] - preCnt[l - 1];
+        cout << ans <<endl;
+      }
+ 
+}
