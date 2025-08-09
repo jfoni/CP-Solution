@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    int t;
+    cin >> t;
+
+    while(t--)
+    {
+        int a, b;
+        cin >> a >> b;
+
+        int moves = 0;
+        int reminder = a % b;
+
+        if(reminder == 0){
+            moves = 0;
+        }
+        else{
+            moves = b - reminder;
+        }
+
+    cout << moves <<endl;
+    }
+}
