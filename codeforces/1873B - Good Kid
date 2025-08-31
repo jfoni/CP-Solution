@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+
+        int n;
+        cin >> n;
+
+        int arr[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+
+        ll Maxproduct = 0;
+
+        for(int i = 0; i < n ; i++)
+        {
+            ll product = 1;
+
+            for(int j = 0; j < n; j++)
+            {
+                if(i == j)
+                {
+                    product *= (arr[j] + 1);
+                }
+
+                else
+                {
+                    product *= arr[j];
+                }
+            }
+
+            if(product > Maxproduct)
+            {
+                Maxproduct = product;
+            }
+        }
+
+        cout << Maxproduct << endl;
+
+    }
+}
