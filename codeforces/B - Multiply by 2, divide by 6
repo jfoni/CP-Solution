@@ -1,0 +1,45 @@
+using namespace std;
+typedef long long ll;
+ 
+void slove()
+{
+    ll n;
+    cin >> n;
+    int count = 0;
+ 
+    while(n != 1)
+    {
+        if(n % 6 == 0)
+        {
+            n /= 6;
+            count++;
+        }
+        else if(n % 3 == 0)
+        {
+            n *= 2;
+            count++;
+        }
+        else
+        {
+            cout << -1 << endl;
+            return;
+        }
+    }
+    cout << count << endl;
+}
+ 
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+ 
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        slove(); 
+    }
+ 
+    return 0;
+}
