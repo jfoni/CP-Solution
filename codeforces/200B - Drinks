@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+void solve()
+{
+    int n;
+    cin >> n;
+
+    vector<double> v(n);
+    for(int i = 0; i< n; i++) cin >> v[i];
+
+    double total = 0;
+
+    for(int i = 0; i< n; i++) total += v[i];
+
+    double final_re = total / n;
+
+    cout << final_re <<endl;
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    solve();
+
+    return 0;
+}
