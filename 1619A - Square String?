@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+void solve()
+{
+    string s;
+    cin >> s;
+
+    int n = s.size();
+    bool sq = true;
+
+    if(n % 2 != 0){
+        sq = false;
+    }
+
+    else{
+        for(int i = 0; i < n/2; i++){
+            if(s[i] != s[i + n/2]){
+                sq = false;
+                break;
+            }
+        }
+    }
+
+    if(sq) cout << "Yes" <<endl;
+    else cout << "No" <<endl;
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    int t;
+    cin >> t;
+
+    while(t--)
+        solve();
+
+    return 0;
+}
