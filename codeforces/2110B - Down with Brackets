@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+
+void solve()
+{
+    string s;
+    cin >> s;
+
+    int o = 0, c = 0;
+    bool found = false;
+
+    for(int i = 0; i < s.size(); i++)
+    {
+        if(s[i] == '(')
+            o++;
+        else
+            c++;
+
+        if(o == c && i != s.size() - 1)
+        {
+            found = true;
+            break;
+        }
+    }
+
+    if(found)
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    int q;
+    cin >> q;
+
+    while(q--)
+        solve();
+    return 0;
+}
+
+
